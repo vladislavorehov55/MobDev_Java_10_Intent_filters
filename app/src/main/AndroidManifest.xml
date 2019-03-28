@@ -3,24 +3,31 @@
     package="com.example.intentfilter">
 
     <application
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor">
-        <activity android:name=".ActivityDate" android:label="Date basic">
+        android:theme="@style/AppTheme">
+        <activity android:name=".Info"></activity>
+        <activity
+            android:name=".ActivityDate"
+            android:label="Date basic">
             <intent-filter>
                 <action android:name="com.example.intent.action.showdate" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityTime" android:label="Time basic">
+        <activity
+            android:name=".ActivityTime"
+            android:label="Time basic">
             <intent-filter>
                 <action android:name="com.example.intent.action.showtime" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>>
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
