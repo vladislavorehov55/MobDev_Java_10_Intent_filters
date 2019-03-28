@@ -3,16 +3,17 @@
     package="com.example.intentfilter">
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor">
         <activity android:name=".ActivityDate"></activity>
         <activity android:name=".ActivityTime" >
             <intent-filter>
-                <action android:name="com.example.intent.action.showtime">
+                <action android:name="com.example.intent.action.showtime" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>>
         <activity android:name=".MainActivity">
