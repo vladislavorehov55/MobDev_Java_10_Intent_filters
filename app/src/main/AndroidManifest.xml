@@ -9,7 +9,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:fullBackupContent="@xml/backup_descriptor">
-        <activity android:name=".ActivityDate"></activity>
+        <activity android:name=".ActivityDate">
+            <intent-filter>
+                <action android:name="com.example.intent.action.showdate" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ActivityTime" >
             <intent-filter>
                 <action android:name="com.example.intent.action.showtime" />
