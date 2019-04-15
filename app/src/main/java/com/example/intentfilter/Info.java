@@ -10,10 +10,14 @@ import java.util.Date;
 
 public class Info extends AppCompatActivity {
 
+    TextView tvView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
+        tvView = (TextView) findViewById(R.id.tvView);
 
         // получаем Intent, который вызывал это Activity
         Intent intent = getIntent();
@@ -39,6 +43,9 @@ public class Info extends AppCompatActivity {
 
         TextView tvDate = (TextView) findViewById(R.id.tvInfo);
         tvDate.setText(textInfo + datetime);
+
+        String lName = intent.getStringExtra("lname");
+        tvView.setText("Your name is: " + lName);
     }
 
 }
