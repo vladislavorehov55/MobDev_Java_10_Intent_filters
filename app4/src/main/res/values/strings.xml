@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="color">
+        <item>holo_purple</item>
+        <item>holo_red_dark</item>
+    </string-array>
+    <string-array name="position">
+        <item>слева</item>
+        <item>по центру</item>
+        <item>справа</item>
+    </string-array>
+</resources>
